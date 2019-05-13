@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <title>component practice</title>
+</head>
+
+<body>
+
+  <div id="app">
+      <product
+        image="https://naver.com"
+        avatar="https://google.com"
+        title="노트북"
+        description="노트북상품설명"
+      ></product>
+      <product
+        image="https://naver.com"
+        avatar="https://google.com"
+        title="노트북"
+        description="노트북상품설명"
+      ></product>
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script>
+    Vue.component('product', {
+      props: ['image', 'title', 'description', 'avatar'],
+      template: `
+        <div>
+          <div>
+            <img :src="image" />
+            <img :src="avatar" width="30" />
+          </div>
+          <div>
+            {{ title }}
+          </div>
+          <p>
+            {{ description }}
+          </p>
+        </div>
+      `
+    });
+    new Vue({
+      el: '#app',
+      data() {
+        return {
+          counter: 0
+        };
+      }
+    });
+
+
+  </script>
+</body>
+
+</html>

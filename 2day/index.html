@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <title>list practice</title>
+  </head>
+  <body>
+
+    <div id="app">
+      <template v-for="item in items">
+        <li>
+          {{ item.id }}
+        </li>
+        <li>
+          <img :src="item.image" />
+        </li>
+      </template>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+      let app = new Vue({
+        el: '#app',
+        data() {
+          return {
+            items : [
+              {
+                id: 1,
+                image: 'https://www.google.com/url?sa=i&source=images&cd=&ved=&url=https%3A%2F%2Ftwitter.com%2Fgooglekorea&psig=AOvVaw16SeSEDgigBw1tSk64PIPF&ust=1557758223504154'
+              },
+              {
+                id: 2,
+                image: 'http://image.itdonga.com/files/2013/12/09/1.png'
+              }
+            ]
+          }
+        }
+      })
+
+
+    </script>
+  </body>
+</html>

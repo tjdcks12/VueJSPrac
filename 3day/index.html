@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <title>attribute binding practice</title>
+</head>
+
+<body>
+
+  <div id="app">
+    <div :class="[dropdown, toggle]">
+      <ul>
+        <li>
+          <a href="#">메뉴1</a>
+        </li>
+        <li>
+          <a href="#">메뉴2</a>
+        </li>
+
+      </ul>
+      <!-- <div :style="[style, fontStyle]" :class="[dropdown, toggle]">
+        test
+      </div> -->
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script>
+    let app = new Vue({
+      el: '#app',
+      data() {
+        return {
+          id: 1,
+          style: {
+            background: 'red',
+            fontSize: '10px',
+            fontFamily: 'dotum'
+          },
+          fontStyle: {
+            fontSize: '10px',
+            fontFamily: 'dotum'
+          },
+          dropdown: {
+            dropdown: true
+          },
+          toggle: {
+            on: false
+          }
+        }
+      }
+    })
+  </script>
+  <style>
+    .dropdown ul {
+      display: none;
+      list-style: none;
+      margin: 0;
+      border: 1px solid black;
+      padding: 10px;
+      width: 200px;
+    }
+
+    .dropdown.on ul {
+      display: block;
+    }
+  </style>
+</body>
+
+</html>

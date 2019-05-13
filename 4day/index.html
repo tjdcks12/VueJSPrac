@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <title>method & eventhandling practice</title>
+</head>
+
+<body>
+
+  <div id="app">
+    <button type="button" v-on:click="counter++">더하기 </button>
+    {{ counter }}
+    <br />
+
+    엔터 키 이벤트
+    <input type="text" @keyup.enter="keyup"/>
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script>
+    new Vue({
+      el: '#app',
+      data() {
+        return {
+          counter: 0
+        };
+      },
+      methods: {
+        add() {
+          // this.counter++;
+          console.log(this.counter);
+        },
+        keyup(ev) {
+          console.log(ev);
+          alert("엔터키 눌렸습니다 ^^");
+        }
+      }
+    })
+  </script>
+</body>
+
+</html>
