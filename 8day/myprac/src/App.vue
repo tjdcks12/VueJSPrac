@@ -11,15 +11,9 @@
 <script>
 import Header from './components/Header.vue'
 import ChatList from './components/ChatList.vue'
-import { bus } from './event-bus';
 
 export default {
   name: 'app',
-  created() {
-    bus.$on('CHAT_CLICK', chat => {
-      this.readChatItem(chat);
-    });
-  },
   data() {
     return {
       chatList : [

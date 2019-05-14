@@ -6,13 +6,11 @@
 </template>
 
 <script>
-import { bus } from '../event-bus';
-
   export default {
     props: ['chat'],
     methods: {
       itemClick() {
-        bus.$emit('CHAT_CLICK', {...this.chat});
+        this.$emit('click', {...this.chat});
       }
     }
   }
