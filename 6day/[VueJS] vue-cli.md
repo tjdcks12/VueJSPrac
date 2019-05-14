@@ -12,8 +12,6 @@ vue-cli는 npm을 통해서 설치 가능하며, home directory 내에서 global
 sudo npm install -g @vue/cli
 ```
 
-
-
 <br>
 
 
@@ -27,4 +25,3 @@ vue create 'project명'
 명령어를 통해 프로젝트를 생성할 수 있으며, 해당 프로젝트에는 node_modules를 포함한 프로젝트의 뼈대 구조가 생성된 것을 볼 수 있습니다.
 
 ![image-20190513125116162](/Users/sungchan/Library/Application Support/typora-user-images/image-20190513125116162.png)
-
